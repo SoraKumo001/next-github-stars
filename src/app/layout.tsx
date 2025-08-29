@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Provider } from "../components/provider";
 import "./globals.css";
 
@@ -13,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider>{children}</Provider>
+        <Suspense>
+          <Provider>{children}</Provider>
+        </Suspense>
       </body>
     </html>
   );
