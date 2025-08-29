@@ -20,9 +20,6 @@ importers:
       react-dom:
         specifier: 19.1.1
         version: 19.1.1(react@19.1.1)
-      react-query-ssr:
-        specifier: 1.0.3
-        version: 1.0.3
     devDependencies:
       '@tailwindcss/postcss':
         specifier: 4.1.12
@@ -523,9 +520,6 @@ packages:
     peerDependencies:
       react: ^19.1.1
 
-  react-query-ssr@1.0.3:
-    resolution: {integrity: sha512-bAnA2bDLYN28Rz9Cde4AqQRiFyXA7EJL2otejv9Mbrtq2ZADun6nBK/R40L5DYHlXqVQjKVcmrOCGCvggihJ/Q==}
-
   react@19.1.1:
     resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
@@ -967,8 +961,6 @@ snapshots:
     dependencies:
       react: 19.1.1
       scheduler: 0.26.0
-
-  react-query-ssr@1.0.3: {}
 
   react@19.1.1: {}
 

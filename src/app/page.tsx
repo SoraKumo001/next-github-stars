@@ -63,7 +63,7 @@ const Page = () => {
           設定
         </button>
         <Link
-          href="https://github.com/SoraKumo001/next-npm"
+          href="https://github.com/SoraKumo001/next-github-stars"
           className="underline"
           target="_blank"
         >
