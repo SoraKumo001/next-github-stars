@@ -1,10 +1,10 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
-import { getGitHubReps } from "../libs/github-repos";
-import { useMemo, type FormEventHandler, type MouseEventHandler } from "react";
-import { DateString } from "../libs/date-string";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useMemo, type FormEventHandler, type MouseEventHandler } from "react";
+import { DateString } from "../libs/date-string";
+import { getGitHubReps } from "../libs/github-repos";
 
 const Page = () => {
   const router = useRouter();
@@ -75,9 +75,9 @@ const Page = () => {
       {data && (
         <>
           <div>⭐: {items.reduce((a, b) => a + b.stargazers_count, 0)}</div>
-          <table className="table [&_*]:border-gray-300 [&_td]:border-x [&_td,&_th]:p-1 [&_th:hover]:bg-slate-100 [&_th]:border-x ">
+          <table className="table [&_*]:border-gray-300 [&_td]:border-x [&_td,&_th]:p-1 [&_th]:border-x [&_th:hover]:bg-slate-100">
             <thead>
-              <tr className="sticky top-0 cursor-pointer bg-white text-lg font-semibold z-10">
+              <tr className="sticky top-0 z-10 cursor-pointer bg-white text-lg font-semibold">
                 {["NO", "Created", "URL", "Stars"].map((v, index) => (
                   <th key={v} onClick={handleHeader} data-index={index}>
                     {v}
@@ -85,7 +85,7 @@ const Page = () => {
                 ))}
               </tr>
             </thead>
-            <tbody className="[&_tr:nth-child(odd)]:bg-slate-200 [&_td]:group-hover:backdrop-brightness-90 [&_tr]:relative [a]:absolute [a]:inset-0 bg-red">
+            <tbody className="[&_td]:group-hover:backdrop-brightness-90 [&_tr]:relative [&_tr:nth-child(odd)]:bg-slate-200 [a]:absolute [a]:inset-0">
               {items?.map(
                 ({ id, created_at, html_url, stargazers_count, index }) => (
                   <tr
